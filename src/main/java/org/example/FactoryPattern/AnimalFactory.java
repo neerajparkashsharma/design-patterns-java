@@ -4,7 +4,7 @@ public class AnimalFactory {
 
     /*
     *
-    * Factory Pattern
+    *     Factory Pattern
     *
     *   - Factory pattern is one of the creational design pattern, and it's used to create objects without exposing the instantiation logic to the client and refer to newly created object using a common interface.
     *   -
