@@ -1,18 +1,19 @@
 package org.example.abstractfactory;
 
-public class Shape3DFactory {
-    public static Shape getShape(String shapeType){
-        if(shapeType == null){
-            return null;
-        }
-        if(shapeType.equalsIgnoreCase("CUBE")){
-            return new Cube();
-        }
-        else if(shapeType.equalsIgnoreCase("SPHERE")){
-            return new Sphere();
-        }
+public class Shape3DFactory implements AbstractFactory {
 
-        return null;
+
+
+    @Override
+    public Shape getShape(String shapeType){
+        switch (shapeType) {
+            case "SPHERE":
+                return new Sphere();
+            case "CUBE":
+                return new Cube();
+            default:
+                return null;
+        }
     }
 
 }
